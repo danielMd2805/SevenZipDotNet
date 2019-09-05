@@ -1,5 +1,5 @@
 # SevenZipDotNet - wrapping original 7-zip API of Igor Pavlov 
-use original 7-zip api in .Net and C++ with identical performance of 7-zip GUI
+**Use original 7-zip api in .Net and C++ with identical performance of 7-zip GUI**
 
 This repo contains the library implementation of 7z.dll for .NET Standard, .NET Core, .NET Framework and CPP.
 The library is CLR managed to be accessed from CPP and C#.
@@ -24,7 +24,7 @@ compressor.DoCompress();
 watch.Stop();
 ```
 
-### Decompression
+#### Decompression
 
 ```c#
 SevenZipExtractor extractor = new SevenZipExtractor(@"PATH_TO_SEVENZIPDLL_\7z.dll",
@@ -67,7 +67,7 @@ compressor->DoCompress();
 
 ```
 
-### Decompression
+#### Decompression
 
 ```cpp
 
