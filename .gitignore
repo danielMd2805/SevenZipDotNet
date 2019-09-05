@@ -3,3 +3,19 @@
 ################################################################################
 
 /.vs
+/Debug
+/Release
+/SevenZip/Debug
+/SevenZip/Release
+/SevenZip/x64
+/SevenZip/SevenZip.vcxproj.bak
+/SevenZip/SevenZip.vcxproj.user
+/TestConsoleCpp/Debug
+/TestConsoleCpp/Release
+/TestConsoleCpp/x64
+*.user
+/TestConsoleCSharp/obj
+/TestConsoleCSharp/bin
+/Win32
+/x64
+/UpgradeLog.htm
