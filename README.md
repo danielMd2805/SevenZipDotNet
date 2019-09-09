@@ -8,6 +8,9 @@ The library is CLR managed to be accessed from CPP and C#.
 
 To use this library you have to specifiy the path to the 7z.dll of the original 7-Zip GUI of Igor Pavlov.
 
+#### 7-Zip License
+https://7-zip.org/license.txt
+
 ### .NET
 
 #### Compression
