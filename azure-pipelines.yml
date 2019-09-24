@@ -31,3 +31,13 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'GitHub-SevenZipDotnet'
+    repositoryName: 'danielMd2805/SevenZipDotNet'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
