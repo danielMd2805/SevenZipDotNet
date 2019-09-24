@@ -36,8 +36,9 @@ steps:
   inputs:
     gitHubConnection: 'GitHub-SevenZipDotnet'
     repositoryName: 'danielMd2805/SevenZipDotNet'
-    action: 'create'
+    action: 'edit'
     target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
+    tag: 'v$(MajorVersion).$(MinorVersion).$(IncrementReleaseTagNumber)'
+    title: 'AzureDevOps GitHubRelease'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
