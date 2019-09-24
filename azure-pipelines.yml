@@ -13,6 +13,8 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'x64'
   buildConfiguration: 'Release'
+  VersionMajorMinor: 1.0
+  VersionRevision: $[counter(variables['VersionMajorMinor'], 0)]
 
 steps:
 - task: NuGetToolInstaller@1
@@ -40,7 +42,7 @@ steps:
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'userSpecifiedTag'
-    tag: 'v$(MajorVersion).$(MinorVersion).$(PatchVersion)'
+    tag: '$(VersionMajorMinor).$(VersionRevision)'
     title: 'SevenZipDotNet Release'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
