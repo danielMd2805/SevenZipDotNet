@@ -152,7 +152,7 @@ bool UsefulFunctions::GetItemsNames(const SevenZipLibraryManager  &libraryManage
 				return false;
 
 			auto size = prop.uhVal.QuadPart;
-			origsizes[i] = size_t(size);
+			origsizes.Add(size_t(size));
 
 			// Get name of file
 			hr = archive->GetProperty(i, kpidPath, &prop);
@@ -162,7 +162,7 @@ bool UsefulFunctions::GetItemsNames(const SevenZipLibraryManager  &libraryManage
 			//valid string? pass back the found value and call the callback function if set
 			if (prop.vt == VT_BSTR) {
 				std::wstring mypath(prop.bstrVal);
-				itemnames[i] = mypath;
+				itemnames.Add(mypath);
 			}
 		}
 	}

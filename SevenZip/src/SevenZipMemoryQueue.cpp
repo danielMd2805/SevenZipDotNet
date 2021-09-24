@@ -68,7 +68,7 @@ void SevenZipMemoryQueue::Init()
 void SevenZipMemoryQueue::Init(int maxQueueSize)
 {
 	_mutex = new MyMutexStruct();
-	_maxQueueSize = 5;
+	_maxQueueSize = maxQueueSize;
 	_completeAdding = false;
 	_currentQueueSize = 0;
 }
