@@ -96,8 +96,11 @@ bool SevenZipCompressor::DoCompress(ProgressCallback* callback /*= nullptr*/)
 
 	SetCompressionProperties(archiver);
 	
-	//Set full outputFilePath including ending
-	_archivePath += UsefulFunctions::EndingFromCompressionFormat(_compressionFormat);
+	if (_endingWithCompressionFormat)
+	{
+		//Set full outputFilePath including ending
+		_archivePath += UsefulFunctions::EndingFromCompressionFormat(_compressionFormat);
+	}
 
 	if (_useTempArchive)
 		_archivePath += _T(".tmp");

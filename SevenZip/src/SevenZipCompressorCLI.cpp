@@ -55,6 +55,11 @@ void SevenZipArchive::SetPassword(System::String^ password)
 	_implArch->SetPassword(StringToWString(password));
 }
 
+void SevenZipArchive::DisableEndingWithCompressionFormat()
+{
+	_implArch->DisableEndingWithCompressionFormat();
+}
+
 System::Collections::Generic::List<System::String^>^ SevenZipArchive::GetItemsNames()
 {
 	auto names = _implArch->GetItemsNames();

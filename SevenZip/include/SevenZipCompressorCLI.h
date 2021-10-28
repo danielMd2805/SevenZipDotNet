@@ -57,6 +57,7 @@ namespace SevenZip
 			System::Collections::Generic::List<System::String^>^ GetItemsNames();
 			System::Collections::Generic::List<System::Int64>^  GetOrigSizes();
 			void SetPassword(System::String^ password);
+			void DisableEndingWithCompressionFormat();
 
 		protected:
 			std::wstring StringToWString(System::String^ string);

@@ -14,6 +14,7 @@ SevenZipArchive::SevenZipArchive(const SevenZipLibraryManager &libraryManager, c
 	, _compressionFormat(CompressionFormat::SevenZip)
 	, _compressionLevel(CompressionLevel::Normal)
 	, _numberOfItems(0)
+	, _endingWithCompressionFormat(true)
 {
 }
 
@@ -120,4 +121,9 @@ bool SevenZipArchive::GetItemsNamesInt()
 void SevenZipArchive::SetPassword(const std::wstring& password)
 {
 	_password = password;
+}
+
+void SevenZipArchive::DisableEndingWithCompressionFormat()
+{
+	_endingWithCompressionFormat = false;
 }
