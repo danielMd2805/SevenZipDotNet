@@ -34,9 +34,12 @@ namespace SevenZipInt
 		virtual CObjectVector<size_t>  GetOrigSizes();
 		virtual void SetPassword(const std::wstring& password);
 
+		virtual void DisableEndingWithCompressionFormat();
+
 	protected:
 		bool _ReadMetadata;
 		bool _OverrideCompressionFormat;
+		bool _endingWithCompressionFormat;
 		
 		const SevenZip::SevenZipLibraryManager &_libraryManager;
 
